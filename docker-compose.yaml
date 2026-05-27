@@ -1,12 +1,12 @@
 services:
-  myhttpd: 
-   image: 'httpd'
-   ports:
-     - '80-85:80'
-   volumes:
-     - './indexes:/usr/local/apache2/htdocs'
-   networks:
-     - 'myvelocity'
+  myhttpd:
+    image: 'httpd'
+    ports:
+      - '80-85:80'
+    volumes:
+      - './indexes:/usr/local/apache2/htdocs'
+    networks:
+      - 'myvelocity'
 
   myecom:
     image: 'httpd'
@@ -15,7 +15,7 @@ services:
     volumes:
       - './indexes/ecom:/usr/local/apache2/htdocs'
     networks:
-     - 'myvelocity'
+      - 'myvelocity'
 
   myclass:
     image: 'httpd'
@@ -24,7 +24,16 @@ services:
     volumes:
       - './indexes/class:/usr/local/apache2/htdocs'
     networks:
-     - 'myvelocity'
+      - 'myvelocity'
+
+  mytomcat:
+    image: 'tomcat:10'
+    ports:
+      - '9090:8080'
+    volumes:
+      - './indexes/wars:/usr/local/tomcat/webapps/'
+    networks:
+      - 'myvelocity'
 
 networks:
   myvelocity:
