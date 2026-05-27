@@ -5,13 +5,17 @@ services:
      - '80-85:80'
    volumes:
      - './indexes:/usr/local/apache2/htdocs'
-  
+   networks:
+     - 'myvelocity'
+
   myecom:
     image: 'httpd'
     ports:
       - '90-95:80'
     volumes:
       - './indexes/ecom:/usr/local/apache2/htdocs'
+    networks:
+     - 'myvelocity'
 
   myclass:
     image: 'httpd'
@@ -19,4 +23,9 @@ services:
       - '8080-8085:80'
     volumes:
       - './indexes/class:/usr/local/apache2/htdocs'
+    networks:
+     - 'myvelocity'
 
+networks:
+  myvelocity:
+    driver: bridge
