@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DevOps Academy</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        header{
+            background:#0d1117;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#161b22;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-weight:bold;
+        }
+
+        .hero{
+            height:500px;
+            background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop') no-repeat center center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero-content{
+            background:rgba(0,0,0,0.6);
+            padding:35px;
+            border-radius:12px;
+        }
+
+        .hero h1{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:20px;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+            background:#238636;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+            font-weight:bold;
+        }
+
+        .courses{
+            padding:60px 20px;
+            text-align:center;
+        }
+
+        .courses h2{
+            font-size:35px;
+            margin-bottom:40px;
+        }
+
+        .course-container{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:white;
+            width:300px;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+
+        .card h3{
+            margin:15px 0 10px;
+        }
+
+        .card p{
+            padding:0 15px 20px;
+            color:#555;
+        }
+
+        .features{
+            background:white;
+            padding:60px 20px;
+            text-align:center;
+        }
+
+        .features h2{
+            margin-bottom:40px;
+            font-size:35px;
+        }
+
+        .feature-box{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .feature{
+            background:#f8f9fa;
+            width:250px;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .feature h3{
+            margin-bottom:15px;
+        }
+
+        .about{
+            padding:60px 20px;
+            text-align:center;
+            background:#e9ecef;
+        }
+
+        .about h2{
+            margin-bottom:20px;
+            font-size:35px;
+        }
+
+        .about p{
+            max-width:800px;
+            margin:auto;
+            line-height:1.8;
+        }
+
+        footer{
+            background:#0d1117;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DevOps Academy 🚀</h1>
+        <p>Learn DevOps with Real-Time Projects & Hands-On Training</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Become a DevOps Engineer</h1>
+            <p>Master Docker, Jenkins, Kubernetes, AWS, Terraform & CI/CD</p>
+            <a href="#" class="btn">Enroll Now</a>
+        </div>
+    </section>
+
+    <section class="courses">
+        <h2>Popular Courses</h2>
+
+        <div class="course-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop" alt="Docker">
+                <h3>Docker & Containers</h3>
+                <p>Learn containerization, Docker images, volumes, networking and deployment.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="AWS">
+                <h3>AWS Cloud</h3>
+                <p>Master EC2, S3, IAM, VPC, Load Balancer and real-time AWS projects.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Kubernetes">
+                <h3>Kubernetes</h3>
+                <p>Learn Pods, Deployments, Services, Ingress and Kubernetes architecture.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Why Join Us?</h2>
+
+        <div class="feature-box">
+
+            <div class="feature">
+                <h3>🎯 Real-Time Projects</h3>
+                <p>Work on industry-level DevOps deployment projects.</p>
+            </div>
+
+            <div class="feature">
+                <h3>👨‍💻 Hands-On Training</h3>
+                <p>Practice every concept directly on Linux and Cloud.</p>
+            </div>
+
+            <div class="feature">
+                <h3>📜 Certification</h3>
+                <p>Get course completion certificate after training.</p>
+            </div>
+
+            <div class="feature">
+                <h3>💼 Placement Support</h3>
+                <p>Resume building and interview preparation support.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About DevOps Academy</h2>
+        <p>
+            DevOps Academy provides professional DevOps training with real-time
+            implementation and industry best practices. Learn CI/CD pipelines,
+            cloud infrastructure, automation, monitoring and container orchestration
+            from experienced mentors.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 DevOps Academy | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
